@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" data-theme='dark'>
+
+<head>
+    <title>Nika | Creative & Digital Agency in Silicon Valley</title>
+    <link rel="icon" href="dist/img/favicon.png" sizes="32x32">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="./dist/app.css" />
+    <script src="dist/vendors.js"></script>
+</head>
+
+<body>
+    <div class="custom-cursor"></div>
+    <div class="preload-container"></div>
+    <div class="preload-container">
+        <div id="preload-percentage">
+            8%
+        </div>
+        <div id="preload-progress-container">
+            <span class="preload-progress"></span>
+        </div>
+        <div id="pre-nika-logo">
+            <img src="./src/img/logo.png" alt="Nika Labs" title="Nika Labs">
+        </div>
+    </div>
+    <button class="theme-switch" data-mode="dark">
+        <span class="visually-hidden">Change theme</span>
+    
+        <span class="track">
+            <span class="sun">
+                <span class="moon"></span>
+            </span>
+        </span>
+    
+        <span class="theme-label" data-text="auto"></span>
+        <span class="theme-label" data-text="light"></span>
+        <span class="theme-label" data-text="dark"></span>
+    </button>
+    <!-- nav Menu -->
+    <nav id="navigationWrap">
+        <div class="MenuOverlayBackground"></div>
+        <div class="nav-container">
+            <div class="header-menu menu-icon">
+                <button data-wow-delay="3s" class="onActive wow fadeInLeft menu-open_button" id="closeNavbar">
+                    <div class="cross">
+                        <div class="cross-in left"></div>
+                        <div class="cross-in right"></div>
+                    </div>
+                </button>
+                <div class="header-menu logo mobile-only">
+                    <a href="works.html"><img src="./dist/img/logo.png" alt="Nika Labs" title="Nika Labs" /></a>
+                </div>
+            </div>
+            <nav class="nav-container-left">
+                <div class="header-menu logo desktop-only">
+                    <a href="index.html"><img src="./dist/img/logo.png" alt="Nika Labs" title="Nika Labs" /></a>
+                </div>
+                <ul class="main_nav">
+                    <li class="onActive wow fadeInLeft" data-wow-delay="1s">
+                        <a id="home" data-img="./dist/img/menu/01-home.jpg" href="index.html">HOME</a>
+                    </li>
+                    <li class="onActive wow fadeInLeft" data-wow-delay="1.2s">
+                        <a id="works" data-img="./dist/img/menu/02-works.jpg" href="works.html">WORK</a>
+                    </li>
+                    <li class="onActive wow fadeInLeft" data-wow-delay="1.4s">
+                        <a id="about" data-img="./dist/img/menu/03-about.jpg" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="onActive wow fadeInLeft" data-wow-delay="1.6s">
+                        <a id="news" data-img="./dist/img/menu/04-thoughts.jpg" href="index.html#thoughts">THOUGHTS</a>
+                    </li>
+                    <li class="onActive wow fadeInLeft" data-wow-delay="1.8s">
+                        <a id="contacts" data-img="./dist/img/menu/05-contact.jpeg" href="index.html#contactUs">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-container-right">
+                <div class="onActive wow fadeInLeft" data-wow-delay="2.2s">
+                    <p><span>Social</span></p>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/nikalabs" target="_blank"><span data-hover="Facebook">Facebook</span></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/nikadigital/" target="_blank"><span data-hover="Instagram">Instagram</span></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/nika-agency" target="_blank"><span data-hover="LinkedIn">LinkedIn</span></a>
+                        </li>
+                        <li>
+                            <a href="https://medium.com/nikaagency" target="_blank"><span data-hover="Medium">Medium</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="onActive wow fadeInLeft" data-wow-delay="2.6s">
+                    <p class="emailMenu"><span>Say Hi!</span></p>
+                    <ul>
+                        <li>
+                            <a class="emailId" href="mailto:contact@nika.agency">contact@nika.agency</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+        <!-- Header -->
+        <section class="panel banner leftMenu">
+            <div class="left-header">
+                <div class="header-section logo">
+                    <a href="index.html" class="scrollToFirst"><img src="./dist/img/logo.png" alt="Nika Labs" title="Nika Labs" /></a>
+                </div>
+                <div class="header-section menu-icon">
+                    <button class="menu-open_button" id="openNavbar">
+                        <span></span>
+                    </button>
+                </div>
+                <div class="header-section header-quote">
+                    <img src="./dist/img/header-flower-icon.png" alt="Flower Icon" title="Flower Icon" />
+                    <p>
+                        <a href="index.html#contactUs" class="scrollToContact"><span>Let’s </span><span>do good </span><span>together!</span></a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div data-router-wrapper>
+            <div data-router-view="workDetail" class="work_detail_page">
+                <div class="projectsActions">
+                    <div class="back-top-list">
+                        <a href="works.html"><span>Back to list</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="22px" height="22px" viewBox="0 0 22 22" xml:space="preserve">
+                                <line class="st0" x1="0.4" y1="21.6" x2="21.5" y2="0.5"></line>
+                                <line class="st0" x1="21.5" y1="21.5" x2="0.5" y2="0.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="website-link">
+                        <a href="index.html"><span>Visit Website</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="22px" height="22px" viewBox="0 0 22 22" xml:space="preserve">
+                                <line class="st0" x1="0.1" y1="6" x2="16.2" y2="6"></line>
+                                <polyline class="st1" points="10.4,11.4 16.1,6 10.4,0.6 "></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- scroll section -->
+                <div class="scroll-area">
+                    <!-- container for all horizontal scroll items -->
+                    <div class="scroll-wrapper">
+                        <section class="panel">
+                            <div class="aboutProject workDetails">
+                                <div class="aboutProject_wrap">
+                                    <div class="projectTitle">
+                                        <div class="projectTitle_wrap">
+                                            <h2>HVACERZ</h2>
+                                            <h2>HVACERZ</h2>
+                                            <h2>HVACERZ</h2>
+                                            <h2>HVACERZ</h2>
+                                        </div>
+                                    </div>
+                                    <div class="inlineBlock spacer"></div>
+                                    <div class="inlineBlock projectsDetails">
+                                        <div class="projectsDetails_wrap">
+                                            <div class="projectImg">
+                                                <img src="dist/img/HVACERZ/main-banner.png" />
+                                            </div>
+                                            <div class="projectDetails_Inner">
+                                                <div class="clinetName">
+                                                    <h4>CLIENT</h4>
+                                                    <p>HVACERZ</p>
+                                                </div>
+                                                <div class="clinetRole">
+                                                    <h4>ROLE</h4>
+                                                    <p>Product Designer</p>
+                                                </div>
+                                                <div class="clinetDelivery">
+                                                    <h4>DELIVERABLES</h4>
+                                                    <p>Concept</p>
+                                                    <p>Storyboard</p>
+                                                    <p>Prototype</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="projectActions">
+                                        <div class="projectActions_wrap">
+                                            <div class="nextSection">
+                                                <div id="q-intro-scroll">
+                                                    <a href="javascript:void(0);">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 109.1 83.9" xml:space="preserve" id="drawIt">
+                                                            <polyline class="st0 introArrow" stroke-width="2" fill="none" stroke="white" points="0.5,34.5 0.5,34.5 0.5,49.4 80.2,49.4 46.2,83.4 67.2,83.4 98.1,52.5 108.6,42 98.1,31.5 67.2,0.5   46.2,0.5 80.2,34.5 0.5,34.5 "></polyline>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="panel" id="second-section">
+                            <div class="siteScreens" style="background-color: #1D1D1B;">
+                                <div class="siteScreensList">
+                                    <div class="siteScreensList_item">
+                                        <img src="dist/img/HVACERZ/board-img1.png" />
+                                    </div>
+                                    <div class="siteScreensList_item">
+                                        <img src="dist/img/HVACERZ/board-img2.png" />
+                                    </div>
+                                    <div class="siteScreensList_item">
+                                        <img src="dist/img/HVACERZ/board-img3.png" />
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="panel">
+                            <div class="storyBlk">
+                                <div class="storyWrap">
+                                    <div class="storyDetails inlineBlock">
+                                        <div class="storyDetails_wrap">
+                                            <h4>Story</h4>
+                                            <h3>
+                                                An industry-leading internet of things (IoT) company that provides a platform to securely manage and scale connected products and services to millions of users.
+                                            </h3>
+                                            <p>
+                                                To create a clear and professional identity in line with Electric Imp’s evolution as a major player in the IoT space, the designers developed a minimalistic ‘imp’ element that imparts friendliness and efficiency.
+                                            </p>
+                                            <p>
+                                                The clean geometry of the primary ‘imp’ element creates versatility, allowing for implementation across publications, campaigns, and other collaterals — with custom iconography created for individual initiatives.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="storyImg inlineBlock">
+                                        <div class="storyImg_wrap">
+                                            <div class="storyscreenImg">
+                                                <img src="dist/img/HVACERZ/line-img.png" />
+                                            </div>
+                                            <div class="storyPlaceholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="panel">
+                            <div class="usedinProject">
+                                <div class="usedinProject_wrap">
+                                    <div class="useInleft inlineBlock">
+                                        <div class="useIn_wrap">
+                                            <h3>
+                                                Connecting the dots between search, site, and media.
+                                            </h3>
+                                            <div class="useIn_adv">
+                                                <div class="useIn_adv_list">
+                                                    <div class="useIn_adv_number" style="color: #D8374B;">
+                                                        100%
+                                                    </div>
+                                                    <div class="useIn_add_title">
+                                                        Monthly subscription
+                                                        increase
+                                                    </div>
+                                                </div>
+                                                <div class="useIn_adv_list">
+                                                    <div class="useIn_adv_number" style="color: #4D62D2;">
+                                                        50%
+                                                    </div>
+                                                    <div class="useIn_add_title">
+                                                        Mobile traffic increase
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p>
+                                                “Category leader Sea Tangle needed an engaging and distinctive brand to Sea Tangle’s popular sea kelp noodles.”
+                                            </p>
+                                            <div class="authorImg">
+                                                <img src="./dist/img/Kepnoodles/ali_img.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="useInRight inlineBlock">
+                                        <div class="useInRight_wrap">
+                                            <p>Marker Felt</p>
+                                            <div class="fontImg">
+                                                <img src="./dist/img/HVACERZ/font-img.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="panel">
+                            <div class="nextProject">
+                                <div class="nextProject_spacer"></div>
+                                <a class="nextProject_link" href="guava.html"></a>
+                                <div class="nextprojectTitle">
+                                    <div class="nextprojectTitle_wrap">
+                                        <h2>Guava</span></h2>
+                                        <div class="nextProject_arrow">
+                                            <img src="./dist/img/nextproarrow.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="contactUs mobile-only">
+                            <div class="copyrights">
+                                <a href="index.html"><span>© NIKA 2020</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <aside class="cookies-notice">
+        <p>This website uses cookies.</p>
+
+        <button class="cookies-notice__close-btn">
+            <span class="hidden">Fermer</span>
+        </button>
+    </aside>
+    <button type='button' class="kill_delayedCall" style="opacity: 0; visibility: hidden; width: 0; height: 0;"></button>
+    <script src="dist/app.js"></script>
+</body>
+
+</html>

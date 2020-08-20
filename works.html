@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" data-theme='dark'>
+
+<head>
+    <title>Nika | Creative & Digital Agency in Silicon Valley</title>
+    <link rel="icon" href="src/img/favicon.png" sizes="32x32">
+    <meta charset="utf-8" />
+    <!-- prettier-ignore -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="./dist/app.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="dist/vendors.js"></script>
+</head>
+
+<body>
+    <div class="custom-cursor"></div>
+    <div class="preload-container"></div>
+    <div class="preload-container">
+        <div id="preload-percentage">
+            8%
+        </div>
+        <div id="preload-progress-container">
+            <span class="preload-progress"></span>
+        </div>
+        <div id="pre-nika-logo">
+            <img src="./src/img/logo.png" alt="Nika Labs" title="Nika Labs">
+        </div>
+    </div>
+    <button class="theme-switch" data-mode="dark">
+        <span class="visually-hidden">Change theme</span>
+    
+        <span class="track">
+            <span class="sun">
+                <span class="moon"></span>
+            </span>
+        </span>
+    
+        <span class="theme-label" data-text="auto"></span>
+        <span class="theme-label" data-text="light"></span>
+        <span class="theme-label" data-text="dark"></span>
+    </button>
+    <!-- nav Menu -->
+    <nav id="navigationWrap">
+        <!-- prettier-ignore -->
+        <div class="MenuOverlayBackground"></div>
+        <div class="nav-container">
+            <div class="header-menu menu-icon">
+                <button data-wow-delay="3s" class="onActive wow fadeInLeft menu-open_button" id="closeNavbar">
+                    <div class="cross">
+                        <div class="cross-in left"></div>
+                        <div class="cross-in right"></div>
+                    </div>
+                </button>
+                <div class="header-menu logo mobile-only">
+                    <a href="index.html"><img src="./dist/img/logo.png" alt="Nika Labs" title="Nika Labs" /></a>
+                </div>
+            </div>
+            <nav class="nav-container-left">
+                <div class="header-menu logo desktop-only">
+                    <a href="index.html"><img src="./dist/img/logo.png" alt="Nika Labs" title="Nika Labs" /></a>
+                </div>
+                <ul class="main_nav">
+                    <li class="onActive wow fadeInLeft" data-wow-delay="1s">
+                        <a id="home" data-img="./dist/img/menu/01-home.jpg" href="index.html">HOME</a>
+                    </li>
+                    <li class="onActive wow fadeInLeft" data-wow-delay="1.2s">
+                        <a id="works" data-img="./dist/img/menu/02-works.jpg" href="works.html">WORK</a>
+                    </li>
+                    <li class="onActive wow fadeInLeft" data-wow-delay="1.4s">
+                        <a id="about" data-img="./dist/img/menu/03-about.jpg" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="onActive wow fadeInLeft" data-wow-delay="1.6s">
+                        <a id="news" data-img="./dist/img/menu/04-thoughts.jpg" href="index.html#thoughts">THOUGHTS</a>
+                    </li>
+                    <li class="onActive wow fadeInLeft" data-wow-delay="1.8s">
+                        <a id="contacts" data-img="./dist/img/menu/05-contact.jpeg" href="index.html#contactUs">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-container-right">
+                <div class="onActive wow fadeInLeft" data-wow-delay="2.2s">
+                    <p><span>Social</span></p>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/nikalabs" target="_blank"><span data-hover="Facebook">Facebook</span></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/nikadigital/" target="_blank"><span data-hover="Instagram">Instagram</span></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/nika-agency" target="_blank"><span data-hover="LinkedIn">LinkedIn</span></a>
+                        </li>
+                        <li>
+                            <a href="https://medium.com/nikaagency" target="_blank"><span data-hover="Medium">Medium</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="onActive wow fadeInLeft" data-wow-delay="2.6s">
+                    <p class="emailMenu"><span>Say Hi!</span></p>
+                    <ul>
+                        <li>
+                            <a class="emailId" href="mailto:contact@nika.agency">contact@nika.agency</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+        <!-- Header -->
+        <section class="panel banner leftMenu">
+            <div class="left-header">
+                <div class="header-section logo">
+                    <a href="index.html" class="scrollToFirst"><img src="./dist/img/logo.png" alt="Nika Labs" title="Nika Labs" /></a>
+                </div>
+                <div class="header-section menu-icon">
+                    <button class="menu-open_button" id="openNavbar">
+                        <span></span>
+                    </button>
+                </div>
+                <div class="header-section header-quote">
+                    <img src="./dist/img/header-flower-icon.png" alt="Flower Icon" title="Flower Icon" />
+                    <p>
+                        <a href="index.html#contactUs" class="scrollToContact"><span>Let’s </span><span>do good </span><span>together!</span></a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div data-router-wrapper>
+            <div data-router-view="work" class="work_page">
+                <canvas id="scene"></canvas>
+                <!-- scroll section -->
+                <div class="scroll-area">
+                    <!-- container for all horizontal scroll items -->
+                    <div class="scroll-wrapper">
+                        <section class="panel introSection" id="first" style="display: none;">
+                            <div class="introContent">
+                                <div class="brand-head-imgset">
+                                    <img class="brand-head-image" src="./dist/img/brand-head-imgset/2.jpg" alt="" />
+                                    <img class="brand-head-image" src="./dist/img/brand-head-imgset/3.jpg" alt="" />
+                                    <img class="brand-head-image" src="./dist/img/brand-head-imgset/4.jpg" alt="" />
+                                    <img class="brand-head-image" src="./dist/img/brand-head-imgset/5.jpg" alt="" />
+                                    <img class="brand-head-image" src="./dist/img/brand-head-imgset/6.jpg" alt="" />
+                                    <img class="brand-head-image" src="./dist/img/brand-head-imgset/7.jpg" alt="" />
+                                    <img class="brand-head-image" src="./dist/img/brand-head-imgset/8.jpg" alt="" />
+                                    <img class="brand-head-image" src="./dist/img/brand-head-imgset/10.jpg" alt="" />
+                                </div>
+                                <div class="introContentWrap">
+                                    <div class="introMainContent">
+                                        <h2 class="we-design-build-head">
+                                            <div class="fadeInUp revolve-container">
+                                                We
+                                                <span class="revolve-phrase"><span class="revolve-word">launch
+                                                    </span>
+                                                    &nbsp;
+                                                    <span class="revolve-word">campaigns</span></span>
+                                                <span class="revolve-phrase"><span class="revolve-word">design</span>
+                                                    &nbsp;
+                                                    <span class="revolve-word">brands</span></span>
+                                                <span class="revolve-phrase"><span class="revolve-word">build</span>
+                                                    &nbsp;
+                                                    <span class="revolve-word">products</span></span>
+                                                <span class="revolve-phrase"><span class="revolve-word">create</span>
+                                                    &nbsp;
+                                                    <span class="revolve-word">content</span></span>
+                                            </div>
+                                        </h2>
+                                        <h2 class="brand-website-head">
+                                            <div class="fadeInUp">
+                                                For <span><span class="brand-head">brands</span></span> That
+                                            </div>
+                                        </h2>
+                                        <h2 class="brand-website-head">
+                                            <div class="fadeInUp">
+                                                Change <span class="emoji_icon">The World</span>.
+                                            </div>
+                                        </h2>
+                                    </div>
+                                    <div class="skipContent fadeInUp">
+                                        <div id="q-intro-scroll">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 109.1 83.9" xml:space="preserve" id="drawIt">
+                                                <polyline class="st0" stroke-width="2" fill="none" stroke="white" points="0.5,34.5 0.5,34.5 0.5,49.4 80.2,49.4 46.2,83.4 67.2,83.4 98.1,52.5 108.6,42 98.1,31.5 67.2,0.5   46.2,0.5 80.2,34.5 0.5,34.5 ">
+                                                </polyline>
+                                            </svg>
+                                        </div>
+                                        <a href="#portfolio" class="scrollTo">Scroll</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="panel sectionProject_news sectionworks_news">
+                            <div class="panel">
+                                <div class="portfolio" id="portfolio">
+                                    <div class="projectTitle">
+                                        <div class="projectTitle_wrap contact-heading">
+                                            <h2>Featured <span>Works</span></h2>
+                                            <h2>Featured <span>Works</span></h2>
+                                            <h2>Featured <span>Works</span></h2>
+                                            <h2>Featured <span>Works</span></h2>
+                                            <h2>Featured <span>Works</span></h2>
+                                        </div>
+                                    </div>
+                                    <div class="spacer"></div>
+                                    <div id="portfolioWrap">
+                                        <section class="content | scrollarea-ctn">
+                                            <div class="scrollarea | slideshow">
+                                                <ul class="slideshow-list">
+                                                    <li class="slideshow-list__el">
+                                                        <article class="tile | js-tile">
+                                                            <a href="sea-tangle-details.html">
+                                                                <figure class="tile__fig">
+                                                                    <img src="./dist/img/portfolio-1.png" data-hover="./dist/img/portfolio-1.png" alt="KepNoodles" class="tile__img" />
+                                                                </figure>
+                                                                <div class="tile__content">
+                                                                    <div class="tile__cta">
+                                                                        Website,
+                                                                        Animation
+                                                                    </div>
+                                                                    <h2 class="tile__title | title title--medium">
+                                                                        KepNoodles
+                                                                    </h2>
+                                                                </div>
+                                                            </a>
+                                                        </article>
+                                                    </li>
+                                                    <li class="slideshow-list__el">
+                                                        <article class="tile | js-tile">
+                                                            <a href="#">
+                                                                <figure class="tile__fig">
+                                                                    <img src="./dist/img/portfolio-2.png" data-hover="./dist/img/portfolio-2.png" alt="SVM" class="tile__img" />
+                                                                </figure>
+                                                                <div class="tile__content">
+                                                                    <div class="tile__cta">
+                                                                        Website,
+                                                                        Animation
+                                                                    </div>
+                                                                    <h2 class="tile__title | title title--medium">
+                                                                        SVM
+                                                                    </h2>
+                                                                </div>
+                                                            </a>
+                                                        </article>
+                                                    </li>
+                                                    <li class="slideshow-list__el">
+                                                        <article class="tile | js-tile">
+                                                            <a href="apothe-pure-details.html">
+                                                                <figure class="tile__fig">
+                                                                    <img src="./dist/img/portfolio-3.png" data-hover="./dist/img/portfolio-3.png" alt="ApothePure" class="tile__img" />
+                                                                </figure>
+                                                                <div class="tile__content">
+                                                                    <div class="tile__cta">
+                                                                        Website,
+                                                                        Animation
+                                                                    </div>
+                                                                    <h2 class="tile__title | title title--medium">
+                                                                        ApothePure
+                                                                    </h2>
+                                                                </div>
+                                                            </a>
+                                                        </article>
+                                                    </li>
+                                                    <li class="slideshow-list__el">
+                                                        <article class="tile | js-tile">
+                                                            <a href="#">
+                                                                <figure class="tile__fig">
+                                                                    <img src="./dist/img/portfolio-4.png" data-hover="./dist/img/portfolio-4.png" alt="Protiviti" class="tile__img" />
+                                                                </figure>
+                                                                <div class="tile__content">
+                                                                    <div class="tile__cta">
+                                                                        Website,
+                                                                        Animation
+                                                                    </div>
+                                                                    <h2 class="tile__title | title title--medium">
+                                                                        Protiviti
+                                                                    </h2>
+                                                                </div>
+                                                            </a>
+                                                        </article>
+                                                    </li>
+                                                    <li class="slideshow-list__el">
+                                                        <article class="tile | js-tile">
+                                                            <a href="electric-imp-details.html">
+                                                                <figure class="tile__fig">
+                                                                    <img src="./dist/img/portfolio-5.png" data-hover="./dist/img/portfolio-5.png" alt="ElectricImp" class="tile__img" />
+                                                                </figure>
+                                                                <div class="tile__content">
+                                                                    <div class="tile__cta">
+                                                                        Website,
+                                                                        Animation
+                                                                    </div>
+                                                                    <h2 class="tile__title | title title--medium">
+                                                                        ElectricImp
+                                                                    </h2>
+                                                                </div>
+                                                            </a>
+                                                        </article>
+                                                    </li>
+                                                    <li class="slideshow-list__el">
+                                                        <article class="tile | js-tile">
+                                                            <a href="#">
+                                                                <figure class="tile__fig">
+                                                                    <img src="./dist/img/portfolio-6.png" data-hover="./dist/img/portfolio-6.png" alt="PathWater" class="tile__img" />
+                                                                </figure>
+                                                                <div class="tile__content">
+                                                                    <div class="tile__cta">
+                                                                        Website,
+                                                                        Animation
+                                                                    </div>
+                                                                    <h2 class="tile__title | title title--medium">
+                                                                        PathWater
+                                                                    </h2>
+                                                                </div>
+                                                            </a>
+                                                        </article>
+                                                    </li>
+                                                    <li class="slideshow-list__el">
+                                                        <article class="tile | js-tile">
+                                                            <a href="close-quest.html">
+                                                                <figure class="tile__fig">
+                                                                    <img src="./dist/img/portfolio-7.png" data-hover="./dist/img/portfolio-7.png" alt="PathWater" class="tile__img" />
+                                                                </figure>
+                                                                <div class="tile__content">
+                                                                    <div class="tile__cta">
+                                                                        Website,
+                                                                        Animation
+                                                                    </div>
+                                                                    <h2 class="tile__title | title title--medium">
+                                                                        CloseQuest
+                                                                    </h2>
+                                                                </div>
+                                                            </a>
+                                                        </article>
+                                                    </li>
+                                                    <li class="slideshow-list__el">
+                                                        <article class="tile | js-tile">
+                                                            <a href="hvacerz.html">
+                                                                <figure class="tile__fig">
+                                                                    <img src="./dist/img/portfolio-8.png" data-hover="./dist/img/portfolio-8.png" alt="PathWater" class="tile__img" />
+                                                                </figure>
+                                                                <div class="tile__content">
+                                                                    <div class="tile__cta">
+                                                                        Website,
+                                                                        Animation
+                                                                    </div>
+                                                                    <h2 class="tile__title | title title--medium">
+                                                                        HVACERZ
+                                                                    </h2>
+                                                                </div>
+                                                            </a>
+                                                        </article>
+                                                    </li>
+                                                    <li class="slideshow-list__el">
+                                                        <article class="tile | js-tile">
+                                                            <a href="guava.html">
+                                                                <figure class="tile__fig">
+                                                                    <img src="./dist/img/portfolio-9.png" data-hover="./dist/img/portfolio-9.png" alt="PathWater" class="tile__img" />
+                                                                </figure>
+                                                                <div class="tile__content">
+                                                                    <div class="tile__cta">
+                                                                        Website,
+                                                                        Animation
+                                                                    </div>
+                                                                    <h2 class="tile__title | title title--medium">
+                                                                        Guava
+                                                                    </h2>
+                                                                </div>
+                                                            </a>
+                                                        </article>
+                                                    </li>
+                                                    <li class="slideshow-list__el">
+                                                        <article class="tile | js-tile">
+                                                            <a href="aham.html">
+                                                                <figure class="tile__fig">
+                                                                    <img src="./dist/img/portfolio-10.png" data-hover="./dist/img/portfolio-10.png" alt="PathWater" class="tile__img" />
+                                                                </figure>
+                                                                <div class="tile__content">
+                                                                    <div class="tile__cta">
+                                                                        Website,
+                                                                        Animation
+                                                                    </div>
+                                                                    <h2 class="tile__title | title title--medium">
+                                                                        AHAM
+                                                                    </h2>
+                                                                </div>
+                                                            </a>
+                                                        </article>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="slideshow__progress-ctn work_progressLine">
+                                                <span class="slideshow__progress"></span>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="projectActions worksArrow">
+                                    <div class="projectActions_wrap">
+                                        <div class="nextSection">
+                                            <div id="q-intro-scroll">
+                                                <a href="javascript:void(0);" class="scrollToContact">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 109.1 83.9" xml:space="preserve" id="drawIt">
+                                                        <polyline class="st0 introArrow" stroke-width="2" fill="none" stroke="white" points="0.5,34.5 0.5,34.5 0.5,49.4 80.2,49.4 46.2,83.4 67.2,83.4 98.1,52.5 108.6,42 98.1,31.5 67.2,0.5   46.2,0.5 80.2,34.5 0.5,34.5 " data-svg-origin="0.5 0.5"></polyline>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="panel contactUs worksContact" id="contactUs">
+                            <div class="projectTitle">
+                                <div class="projectTitle_wrap contact-heading">
+                                    <h2>LET'S DO <span>GOOD TOGETHER!</span></h2>
+                                    <h2>LET'S DO <span>GOOD TOGETHER!</span></h2>
+                                    <h2>LET'S DO <span>GOOD TOGETHER!</span></h2>
+                                    <h2>LET'S DO <span>GOOD TOGETHER!</span></h2>
+                                </div>
+                            </div>
+                            <div class="spacer"></div>
+                            <div class="contactWrap">
+                                <!-- <h2>Let’s make</h2>
+                                <h2 id="contact-wrap-something-text">
+                                    <span>something</span>
+                                </h2>
+                                <h2>
+                                    <span>great!</span>
+                                    <img src="./dist/img/flower-img.png" />
+                                </h2> -->
+                                <h4>Let's do <span>&nbsp;good together!</span> <img src="./dist/img/flower-img.png" /></h4>
+                                <div class="contactFormWrap">
+                                    <form name="frmContact" id="frmContact" method="post" action="">
+                                        Hello, my name is
+                                        <div class="inputwrap">
+                                            <input type="text" id="userName" class="input-type" name="" placeholder="FIRST & LAST" />
+                                            <span></span>
+                                            <span id="userName-info" class="info"></span>
+                                        </div>
+                                        from
+                                        <div class="inputwrap">
+                                            <input type="text" id="company" class="input-type" name="" placeholder="COMPANY" />
+                                            <span></span>
+                                            <span id="userCompany-info" class="info"></span>
+                                        </div>
+                                        You can reach me at
+                                        <div class="inputwrap">
+                                            <input type="email" id="userEmail" class="input-type" name="" placeholder="ENTER YOUR EMAIL HERE" />
+                                            <span></span>
+                                            <span id="userEmail-info" class="info"></span>
+                                        </div>
+                                        I'm looking forward for
+                                        <div class="inputwrap comments">
+                                            <textarea id="content" class="input-type" name="" placeholder="ENTER YOUR PROJECT DETAILS"></textarea>
+                                            <span></span>
+                                            <span id="userMessage-info" class="info"></span>
+                                        </div>
+                                        <div id="message-box"></div>
+                                        <div class="formSubmit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 109.1 83.9" xml:space="preserve" id="drawIt">
+                                                <polyline class="st0" stroke-width="2" fill="none" stroke="white" points="0.5,34.5 0.5,34.5 0.5,49.4 80.2,49.4 46.2,83.4 67.2,83.4 98.1,52.5 108.6,42 98.1,31.5 67.2,0.5   46.2,0.5 80.2,34.5 0.5,34.5 ">
+                                                </polyline>
+                                            </svg>
+                                            <input type="submit" value="Submit" name="Submit" id="formSubmit" />
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="contactDetails">
+                                    <div>
+                                        <a href="#">18 S 2nd St, <br>San Jose, CA 95113</a>
+                                    </div>
+                                    <div>
+                                        <a href="mailto:contact@nika.agency">contact@nika.agency</a>
+                                    </div>
+                                    <div>
+                                        <a href="tel:+1 408 220 9081">+1 408 220 9081</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="contactUs mobile-only">
+                            <div class="copyrights">
+                                <a href="index.html"><span>© NIKA 2020</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <aside class="cookies-notice">
+        <p>This website uses cookies.</p>
+
+        <button class="cookies-notice__close-btn">
+            <span class="hidden">Fermer</span>
+        </button>
+    </aside>
+    <button type='button' class="kill_delayedCall" style="opacity: 0; visibility: hidden; width: 0; height: 0;"></button>
+    <script src="dist/app.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+        $('form').on('submit', function(e) {
+
+            e.preventDefault();
+
+            var valid = true;
+            var userName = $("#userName").val();
+            var userEmail = $("#userEmail").val();
+            var userContent = $("#content").val();
+            var userCompany = $("#company").val();
+
+            $(".info").html("");
+            //$(".input-type").css('border', '#e0dfdf 1px solid');
+
+            if (userName == "") {
+                //$("#userName-info").html("Required.");
+                $("#userName").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+            if (userEmail == "") {
+                //$("#userEmail-info").html("Required.");
+                $("#userEmail").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+            if (userCompany == "") {
+                //$("#userCompany-info").html("Required.");
+                $("#company").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+            if (!userEmail.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+                //$("#userEmail-info").html("Invalid Email Address.");
+                $("#userEmail").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+            if (userContent == "") {
+                //$("#userMessage-info").html("Required.");
+                $("#content").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+            console.log(valid);
+
+            if (valid) {
+
+                jQuery('#formSubmit').prop('disabled', true);
+                jQuery('#formSubmit').val('Sending...');
+
+                $.ajax({
+                    type: "POST",
+                    url: 'mail.php',
+                    data: { email: userEmail, name: userName, company: userCompany, content: userContent },
+                    success: function(res) {
+                        result = JSON.parse(res);
+                        if (result.success) {
+                            jQuery('#message-box').html(result.message);
+                            jQuery('#formSubmit').prop('disabled', false);
+                            jQuery('#formSubmit').val('Submit');
+                            $("#userName").val('');
+                            $("#company").val('');
+                            $("#userEmail").val('');
+                            $("#content").val('');
+                        } else {
+                            jQuery('#message-box').html('Failed to send mail');
+                            jQuery('#formSubmit').prop('disabled', false);
+                            jQuery('#formSubmit').val('Submit');
+                        }
+                    },
+                });
+            }
+
+        });
+    });
+
+    </script>
+</body>
+
+</html>
